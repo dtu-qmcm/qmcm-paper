@@ -10,7 +10,7 @@ This is a template that you can use for your papers.
 2. Copy this template: 
 
    ```sh
-   copier copy dtu-qmcm/qmcm-paper name-of-paper-folder
+   copier copy gh:dtu-qmcm/qmcm-paper name-of-paper-folder --vcs-ref HEAD
    ```
 3. Answer the questions.
 4. `cd name-of-paper-folder`
