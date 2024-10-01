@@ -1,0 +1,36 @@
+_subdirectory: template
+_message_before_copy: |
+    Welcome to the QMCM paper template!
+
+    You'll be asked a series of questions whose answers will be used to
+    generate a tailored project for you.
+project_name:
+  type: str
+  help: Name of your project
+  default: My Cool Project
+description:
+  type: str
+  help: A short description of the project.
+  default: A very cool project
+authors:
+  type: str
+  help: The paper's authors, separated by commas (first will be assumed corresponding author)
+_answers_file: .copier_answers.yml
+_message_after_copy: |
+    Your project "{{ project_name }}" has been created successfully!
+
+    Next steps:
+
+    1. Change directory to the project root:
+
+       $ cd {{ _copier_conf.dst_path }}
+
+    2. Write your paper by editing the file `main.md`. Preview with
+
+       $ quarto preview
+
+    3. Render your paper:
+
+       $ quarto render
+
+

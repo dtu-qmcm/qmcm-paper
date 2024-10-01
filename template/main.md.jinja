@@ -1,0 +1,62 @@
+---
+title: "{{ project_name }}"
+resource_path: ["../"]
+subtitle: " {{ description }} "
+author:{% for author_i in authors.split(',') %}
+  - name: {{author_i.strip()}}{%- if loop.index0 == 0 %}
+    corresponding: true {%- endif %}
+    equal-contributor: true
+    email: EMAIL@biosustain.dtu.dk
+    orcid: XXXX-XXXX-XXXX-XXXX
+    affiliation:
+      - ref: 1
+{%- endfor %}
+affiliations:
+  - id: 1
+    name: DTU Biosustain
+    department: Quantitative Modelling of Cell Metabolism
+abstract: |
+  {{ description }}
+keywords: 
+  - Computational biology
+bibliography: bibliography.bib
+linkcolor: blue
+format:
+  html: default
+  docx: default
+  plos-pdf:
+    keep-tex: true
+---
+
+# Tutorial section: examples of to do things with 
+
+It is widely agreed that this is a reference [@st.johnBayesianInferenceMetabolic2018].
+
+@fig-newt shows a placeholder image, which comes from the file `img/placeholder.jpg`.
+
+::: {#fig-newt}
+![](img/placeholder.jpg)
+This is a very interesting picture. You can use it if you want to write about a figure that isn't ready yet.
+:::
+
+@eq-math has some math.
+
+$$
+\exists\mathfrak{M}ath
+$$ {#eq-math}
+
+# Introduction
+
+# Methods
+
+## Code and data availiability
+
+# Results
+
+# Discussion
+
+# Conclusion
+
+# Acknowledgements
+
+This 
