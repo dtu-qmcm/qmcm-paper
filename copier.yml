@@ -4,14 +4,14 @@ _message_before_copy: |
 
     You'll be asked a series of questions whose answers will be used to
     generate a tailored project for you.
-project_name:
+paper_title:
   type: str
-  help: Name of your project
-  default: My Cool Project
+  help: Title of your paper
+  default: My Cool Paper
 description:
   type: str
-  help: A short description of the project.
-  default: A very cool project
+  help: A short description of the paper.
+  default: A very cool paper
 authors:
   type: str
   help: The paper's authors, separated by commas (first will be assumed corresponding author)
